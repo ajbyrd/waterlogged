@@ -1,0 +1,14 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "Adam",
+            "email": "adam@adam.com",
+            "password": "123"
+        }
+    ],
+    "trip_details": [],
+    "locations": [],
+    "comments": [],
+    "seasons": []
+}
