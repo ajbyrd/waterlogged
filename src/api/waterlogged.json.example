@@ -1,0 +1,44 @@
+{
+    "users": [
+        {
+            "id": ,
+            "username": ,
+            "email": ,
+            "password": 
+        },
+
+    ],
+    "trip_details": [
+        {
+            "id": ,
+            "userId": ,
+            "locationId": ,
+            "commentId": ,
+            "seasonId": ,
+            "date": ,
+            "gear": ,
+            "isComplete": ,
+            "isPrivate": 
+        }
+    ],
+    "locations": [
+        {
+            "id": ,
+            "watername": ,
+            "wateraccess": ,
+            "fish": 
+        }
+    ],
+    "comments": [
+        {
+           "id": ,
+           "userId": ,
+           "comment": ,
+           "timestamp":  
+        }
+    ],
+    "seasons": [
+        "id": ,
+        "season": ,
+    ]
+}

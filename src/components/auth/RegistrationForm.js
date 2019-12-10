@@ -36,7 +36,7 @@ class RegistrationForm extends Component {
                                 userId: newUser[0].id,
                                 name: newUser[0].username
                             })
-                            this.props.history.push("/messages")
+                            this.props.history.push("/home")
                         })
 
                 )

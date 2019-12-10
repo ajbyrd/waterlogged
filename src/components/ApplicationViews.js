@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom'
 import Login from './auth/Login'
 import RegistrationForm from './auth/RegistrationForm'
 import APIManager from '../modules/APIManager'
-
+import Home from './home/Home'
 class ApplicationViews extends Component {
 
     authenticated = () => localStorage.getItem('credentials') !== null
@@ -30,7 +30,18 @@ class ApplicationViews extends Component {
                         return <Login setUser={this.props.setUser} authenticated={this.authenticated} {...props} />
                     }}
                 />
-
+                <Route
+                    exact path="/" render={props => {
+                        return !this.authenticated() ?
+                            <Login setUser={this.props.setUser} authenticated={this.authenticated} {...props} />
+                            : <Home {...props} />
+                    }}
+                />
+                <Route
+                    exact path="/home" render={props => {
+                        return <Home setUser={this.props.setUser} authenticated={this.authenticated} {...props} />
+                    }}
+                />
             </>
         )
     }
