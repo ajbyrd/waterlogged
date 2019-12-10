@@ -26,7 +26,7 @@ class RegistrationForm extends Component {
                 email: this.state.email,
                 password: this.state.password,
             }
-            APIManager.post("users", registration)
+            APIManager.post("users", registrationInfo)
                 .then(() =>
                     APIManager.getAll(`users?email=${this.state.email}`)
                         .then((newUser) => {
