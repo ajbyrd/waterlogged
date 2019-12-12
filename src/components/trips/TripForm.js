@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import APIManager from '../../module/APIManager'
+// import APIManager from '../../module/APIManager'
 
 
 class TripForm extends Component {
 
     state = {
-        userId: '',
         locationId: '',
         commentId: '',
         seasonId: '',
@@ -13,7 +12,7 @@ class TripForm extends Component {
         gear: '',
         isFuture: false,
         isPast: false,
-        isPrivate: '',
+        isPrivate: false,
         waterName: '',
         waterAccess: '',
         fish: '',
@@ -29,7 +28,14 @@ class TripForm extends Component {
 
     createTrip = evt => {
         evt.preventDefault()
-        
+        if (this.state.waterName === "" || this.state.waterAccess === "" || this.state.fish === "" || this.state.gear === "" ||this.state.date === "") {
+            window.alert("Please complete all fields")
+        } else {
+            this.setState({ loadingStatus: true })
+            const userId = JSON.parse(localStorage.getItem("credentials")).userId
+            
+        }
+
     }
 
     // handleInputChange = evt => {
@@ -64,7 +70,7 @@ class TripForm extends Component {
                     />
                 </label>
                 <label>
-                    Would you like to make these trip details private?
+                    Make private?
                         <input
                         name="isPrivate"
                         type="checkbox"
@@ -100,14 +106,29 @@ class TripForm extends Component {
                     />
                 </label>
                 <label>
+                    Fish Species
+                            <input
+                        name="fish"
+                        type="text"
+                        onChange={this.handleFieldChange}
+                        required
+                    />
+                </label>
+                <label>
                     Gear
-                            <textarea
+                    <textarea
                         name="gear"
                         type="text"
                         onChange={this.handleFieldChange}
                         required
                     />
                 </label>
+                <button
+                    type="button"
+                    disabled={this.state.loadingStatus}
+                    onClick={this.createTrip}
+                >Log Trip
+                </button>
             </form>
         )
     }

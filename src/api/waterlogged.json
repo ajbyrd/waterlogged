@@ -1,14 +1,20 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "username": "Adam",
-            "email": "adam@adam.com",
-            "password": "123"
-        }
-    ],
-    "trip_details": [],
-    "locations": [],
-    "comments": [],
-    "seasons": []
+  "users": [
+    {
+      "id": 1,
+      "username": "Adam",
+      "email": "adam@adam.com",
+      "password": "123"
+    },
+    {
+      "username": "Hank",
+      "email": "hank@hank.com",
+      "password": "123",
+      "id": 2
+    }
+  ],
+  "trip_details": [],
+  "locations": [],
+  "comments": [],
+  "seasons": []
 }
