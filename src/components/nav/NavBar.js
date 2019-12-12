@@ -14,10 +14,13 @@ class NavBar extends Component {
             <nav>
                 <ul>
                     <li>
-                       <Link to='/PastTrips'>Past Trips</Link>
+                        <Link to='/home'>Home</Link>
                     </li>
                     <li>
-                        <Link to='/FutureTrips'>Future Trips</Link>
+                       <Link to='/triplist'>Past Trips</Link>
+                    </li>
+                    <li>
+                        <Link to='/triplist'>Future Trips</Link>
                     </li>
                 </ul>
                 <span>

@@ -1,44 +1,103 @@
 {
     "users": [
         {
-            "id": ,
-            "username": ,
-            "email": ,
-            "password": 
+            "id": 1,
+            "username": "Adam",
+            "email": "adam@adam.com",
+            "password": "123"
         },
-
-    ],
-    "trip_details": [
         {
-            "id": ,
-            "userId": ,
-            "locationId": ,
-            "commentId": ,
-            "seasonId": ,
-            "date": ,
-            "gear": ,
-            "isComplete": ,
-            "isPrivate": 
+            "username": "Hank",
+            "email": "hank@hank.com",
+            "password": "123",
+            "id": 2
+        }
+    ],
+    "trips": [
+        {
+            "userId": 1,
+            "date": "2019-07-23",
+            "gear": "5-weight fly rod, Parachute Adams dry fly with nymph dropper",
+            "isFuture": false,
+            "isPast": true,
+            "isPrivate": false,
+            "locationId": 1,
+            "seasonId": 2
+        },
+        {
+            "userId": 2,
+            "date": "2019-11-02",
+            "gear": "5-weight fly rod, San Juan worm with a strike indicator",
+            "isFuture": false,
+            "isPast": true,
+            "isPrivate": false,
+            "locationId": 2,
+            "seasonId": 1
+        },
+        {
+            "userId": 1,
+            "date": "2019-11-02",
+            "gear": "5-weight fly rod, Clouser Minnow, topwater popper",
+            "isFuture": true,
+            "isPast": false,
+            "isPrivate": false,
+            "locationId": 3,
+            "seasonId": 1
+        },
+        {
+            "userId": 1,
+            "date": "2019-11-02",
+            "gear": "5-weight fly rod, black woolly bugger",
+            "isFuture": true,
+            "isPast": false,
+            "isPrivate": false,
+            "locationId": 4,
+            "seasonId": 3
         }
     ],
     "locations": [
         {
-            "id": ,
-            "watername": ,
-            "wateraccess": ,
-            "fish": 
-        }
-    ],
-    "comments": [
+            "id": 1,
+            "waterName": "Caney Fork",
+            "waterAccess": "Kayak",
+            "fish": "Rainbows, Browns, Brookies"
+        },
         {
-           "id": ,
-           "userId": ,
-           "comment": ,
-           "timestamp":  
+            "id": 2,
+            "waterName": "Tellico River",
+            "waterAccess": "Wading",
+            "fish": "Rainbow Trout"
+        },
+        {
+            "id": 3,
+            "waterName": "Harpeth River",
+            "waterAccess": "Kayak",
+            "fish": "Smallmouth Bass, Longear Sunfish, Panfish"
+        },
+        {
+            "id": 4,
+            "waterName": "Cahaba River",
+            "waterAccess": "Wet Wading",
+            "fish": "Redeye Bass"
         }
     ],
+    "comments": [],
     "seasons": [
-        "id": ,
-        "season": ,
+        {
+            "id": 1,
+            "season": "Spring"
+        },
+        {
+            "id": 2,
+            "season": "Summer"
+        },
+        {
+            "id": 3,
+            "season": "Fall"
+        },
+        {
+            "id": 4,
+            "season": "Winter"
+        }
     ]
 }
