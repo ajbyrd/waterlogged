@@ -5,9 +5,7 @@ import React, { Component } from 'react'
 class TripForm extends Component {
 
     state = {
-        locationId: '',
-        commentId: '',
-        seasonId: '',
+        season: '',
         date: '',
         gear: '',
         isFuture: false,
@@ -34,6 +32,7 @@ class TripForm extends Component {
             this.setState({ loadingStatus: true })
             const userId = JSON.parse(localStorage.getItem("credentials")).userId
             
+
         }
 
     }
@@ -107,7 +106,7 @@ class TripForm extends Component {
                 </label>
                 <label>
                     Fish Species
-                            <input
+                            <textarea
                         name="fish"
                         type="text"
                         onChange={this.handleFieldChange}

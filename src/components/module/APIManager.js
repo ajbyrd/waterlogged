@@ -5,8 +5,8 @@ const remoteURL = "http://localhost:5002"
 export default {
 
 
-    get(page, id) {
-        return fetch(`${remoteURL}/${page}/${id}`)
+    get(id) {
+        return fetch(`${remoteURL}/trips/${id}`)
             .then(r => r.json())
     },
 
@@ -35,8 +35,8 @@ export default {
         }).then(data => data.json())
     },
 
-    delete(page, id) {
-        return fetch(`${remoteURL}/${page}/${id}`, {
+    delete(id) {
+        return fetch(`${remoteURL}/trips/${id}`, {
             method: "DELETE",
         }).then(data => data.json())
     }

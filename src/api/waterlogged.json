@@ -13,8 +13,95 @@
       "id": 2
     }
   ],
-  "trip_details": [],
-  "locations": [],
+  "trips": [
+    {
+      "id": 1,
+      "userId": 1,
+      "date": "2019-07-23",
+      "gear": "5-weight fly rod, Parachute Adams dry fly with nymph dropper",
+      "isFuture": false,
+      "isPast": true,
+      "isPrivate": false,
+      "locationId": 1,
+      "seasonId": 2
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "date": "2019-11-02",
+      "gear": "5-weight fly rod, San Juan worm with a strike indicator",
+      "isFuture": false,
+      "isPast": true,
+      "isPrivate": false,
+      "locationId": 2,
+      "seasonId": 1
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "date": "2019-11-02",
+      "gear": "5-weight fly rod, Clouser Minnow, topwater popper",
+      "isFuture": true,
+      "isPast": false,
+      "isPrivate": false,
+      "locationId": 3,
+      "seasonId": 1
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "date": "2019-11-02",
+      "gear": "5-weight fly rod, black woolly bugger",
+      "isFuture": true,
+      "isPast": false,
+      "isPrivate": false,
+      "locationId": 4,
+      "seasonId": 3
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "waterName": "Caney Fork",
+      "waterAccess": "Kayak",
+      "fish": "Rainbows, Browns, Brookies"
+    },
+    {
+      "id": 2,
+      "waterName": "Tellico River",
+      "waterAccess": "Wading",
+      "fish": "Rainbow Trout"
+    },
+    {
+      "id": 3,
+      "waterName": "Harpeth River",
+      "waterAccess": "Kayak",
+      "fish": "Smallmouth Bass, Longear Sunfish, Panfish"
+    },
+    {
+      "id": 4,
+      "waterName": "Cahaba River",
+      "waterAccess": "Wet Wading",
+      "fish": "Redeye Bass"
+    }
+  ],
   "comments": [],
-  "seasons": []
+  "seasons": [
+    {
+      "id": 1,
+      "season": "Spring"
+    },
+    {
+      "id": 2,
+      "season": "Summer"
+    },
+    {
+      "id": 3,
+      "season": "Fall"
+    },
+    {
+      "id": 4,
+      "season": "Winter"
+    }
+  ]
 }
