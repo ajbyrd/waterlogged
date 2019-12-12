@@ -1,7 +1,7 @@
 
 
 import React, { Component } from 'react'
-import APIManager from '../../modules/APIManager'
+import APIManager from '../module/APIManager'
 
 class Login extends Component {
 

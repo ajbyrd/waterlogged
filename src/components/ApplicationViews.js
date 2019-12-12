@@ -1,10 +1,13 @@
 import { Route } from 'react-router-dom'
 import React, { Component } from 'react'
-import { Redirect } from 'react-router-dom'
+// import { Redirect } from 'react-router-dom'
 import Login from './auth/Login'
 import RegistrationForm from './auth/RegistrationForm'
-import APIManager from '../modules/APIManager'
+import APIManager from './module/APIManager'
 import Home from './home/Home'
+import TripForm from './trips/TripForm'
+
+
 class ApplicationViews extends Component {
 
     authenticated = () => localStorage.getItem('credentials') !== null
@@ -40,6 +43,12 @@ class ApplicationViews extends Component {
                 <Route
                     exact path="/home" render={props => {
                         return <Home setUser={this.props.setUser} authenticated={this.authenticated} {...props} />
+                    }}
+                />
+
+                <Route
+                    exact path="/tripform" render={props => {
+                        return <TripForm setUser={this.props.setUser} authenticated={this.authenticated} {...props} />
                     }}
                 />
             </>
