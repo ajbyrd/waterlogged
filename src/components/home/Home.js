@@ -13,6 +13,16 @@ class Home extends Component {
 
   }
 
+  handleNewLocationButton = (evt) => {
+    evt.preventDefault()
+    if (this.props.authenticated()) {
+      this.props.history.push("/locationform")
+    } else {
+      window.alert('Please register or log in.')
+    }
+
+  }
+
   render() {
     return (
       <>
@@ -20,11 +30,14 @@ class Home extends Component {
           Waterlogged
       </h1>
         <p>
-          Waterlogged is your new one stop shop for keeping track of past and future fly-fishing trips. Get started by clicking the button below!
+          Waterlogged is your new one stop shop for keeping track of past and future fly-fishing trips. Get started by choosing an option below!
       </p>
         <button
           onClick={this.handleNewTripButton}
-        >Add Trip</button>
+        >Add Trip from Existing Location</button>
+        <button
+          onClick={this.handleNewLocationButton}
+        >Add New Location</button>
       </>
     )
   }

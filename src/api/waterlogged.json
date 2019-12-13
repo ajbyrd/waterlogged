@@ -57,6 +57,17 @@
       "isPrivate": false,
       "locationId": 4,
       "seasonId": 3
+    },
+    {
+      "userId": 1,
+      "date": "2020-03-28",
+      "gear": "5-weight fly rod, elk hair caddis dry fly, streamers",
+      "isFuture": true,
+      "isPast": false,
+      "isPrivate": false,
+      "locationId": 1,
+      "seasonId": 1,
+      "id": 5
     }
   ],
   "locations": [
@@ -83,6 +94,12 @@
       "waterName": "Cahaba River",
       "waterAccess": "Wet Wading",
       "fish": "Redeye Bass"
+    },
+    {
+      "waterName": "Hiawassee River",
+      "waterAccess": "Drift Boat",
+      "fish": "Brown Trout, Rainbow Trout",
+      "id": 5
     }
   ],
   "comments": [],

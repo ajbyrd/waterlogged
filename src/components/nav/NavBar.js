@@ -1,48 +1,48 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from "react-router-dom"
-
+import './NavBar.css'
 
 class NavBar extends Component {
 
     handleLogout = () => {
         this.props.clearUser();
         this.props.history.push('/home');
-      }
+    }
 
     render() {
         return (
             <nav>
-                <ul>
+                <ul className="container">
                     <li>
                         <Link to='/home'>Home</Link>
                     </li>
                     <li>
-                       <Link to='/triplist'>Past Trips</Link>
+                        <Link to='/pasttrips'>Past Trips</Link>
                     </li>
                     <li>
-                        <Link to='/triplist'>Future Trips</Link>
+                        <Link to='/futuretrips'>Future Trips</Link>
                     </li>
-                </ul>
-                <span>
-                    <ul>
-                        {
-                        !this.props.authenticated() ?
-                        <>
-                        <li>
-                            <Link to="/login">Login</Link>
-                        </li>
+                    
 
-                        <li>
-                            <Link to="/register">Register</Link>
-                        </li>
-                        </>
-                        : 
-                        <li>
-                            <button onClick={this.handleLogout}>Logout</button>
-                        </li>
+                        {
+                            !this.props.authenticated() ?
+                                <>
+                                    <li>
+                                        <Link to="/login">Login</Link>
+                                    </li>
+
+                                    <li>
+                                        <Link to="/register">Register</Link>
+                                    </li>
+                                </>
+                                :
+                                <li>
+                                    <button onClick={this.handleLogout}>Logout</button>
+                                </li>
                         }
-                    </ul>
-                </span>
+
+                    
+                </ul>
 
             </nav>
 

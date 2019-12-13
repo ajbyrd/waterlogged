@@ -1,0 +1,14 @@
+nav .container {
+    display: flex;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  
+  nav .container li {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    box-sizing: border-box;
+    list-style-type: none;
+  }
