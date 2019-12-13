@@ -22,7 +22,7 @@ class TripDetail extends Component {
                     waterName: trip.location.waterName,
                     date: trip.date,
                     gear: trip.gear,
-                    waterAccess: trip.location.gear,
+                    waterAccess: trip.location.waterAccess,
                     fish: trip.location.fish,
                     season: trip.season.season,
                     loadingStatus: false
@@ -32,8 +32,23 @@ class TripDetail extends Component {
 
     render() {
         return (
-        <h1>{this.state.waterName}</h1>
+            <>
+                <div>
+                    <h1>{this.state.waterName}</h1>
+                    <h3>{this.state.date}</h3>
+                    {/* <img>{this.state.imageUrl}</img> */}
+                </div>
+                <aside>
+                    <section>Water Access: {this.state.waterAccess}</section>
+                    <section>Gear: {this.state.gear}</section>
+                    <section>Fish: {this.state.fish}</section>
+                    <section>Season: {this.state.season}</section>
+                    <button>Edit Trip Details</button>
+                    <button>Edit Location Details</button>
+                </aside>
 
+
+            </>
         )
     }
 

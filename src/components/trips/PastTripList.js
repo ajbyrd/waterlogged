@@ -5,7 +5,7 @@ import APIManager from '../module/APIManager'
 
 const loggedInUserId = () => JSON.parse(localStorage.getItem("credentials")).userId
 
-class TripList extends Component {
+class PastTripList extends Component {
     state = {
         trips: []
     }
@@ -13,7 +13,14 @@ class TripList extends Component {
     componentDidMount() {
         APIManager.getAll(`trips?userId=${loggedInUserId()}&_expand=location&_expand=season`)
             .then((trips) => {
-                this.setState({ trips: trips })
+                const pastTrips = trips.filter(trip => {
+                    let past = false
+                    if (trip.isPast === true) {
+                        past = true
+                    }
+                    return past
+                })
+                this.setState({ trips: pastTrips })
             })
     }
 
@@ -22,8 +29,15 @@ class TripList extends Component {
             .then(() => {
                 APIManager.getAll(`trips?userId=${loggedInUserId()}&_expand=location&_expand=season`)
                     .then((newTrips) => {
+                        const newPastTrips = newTrips.filter(trip => {
+                            let past = false
+                            if (trip.isPast === true) {
+                                past = true
+                            }
+                            return past
+                        })
                         this.setState({
-                            trips: newTrips
+                            trips: newPastTrips
                         })
                     })
             })
@@ -35,7 +49,7 @@ class TripList extends Component {
                 <section>
                     <button type="button"
                         onClick={() => { this.props.history.push("/tripform") }}>
-                        New Trip
+                        Add Past Trip
                     </button>
                 </section>
                 <div>
@@ -56,4 +70,4 @@ class TripList extends Component {
 
 }
 
-export default TripList
+export default PastTripList

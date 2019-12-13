@@ -6,8 +6,10 @@ import RegistrationForm from './auth/RegistrationForm'
 import APIManager from './module/APIManager'
 import Home from './home/Home'
 import TripForm from './trips/TripForm'
-import TripList from './trips/TripList'
+import PastTripList from './trips/PastTripList'
 import TripDetail from './trips/TripDetail'
+import FutureTripList from './trips/FutureTripList'
+import LocationForm from './trips/LocationForm'
 
 class ApplicationViews extends Component {
 
@@ -53,13 +55,23 @@ class ApplicationViews extends Component {
                     }}
                 />
                  <Route
-                    exact path="/triplist" render={props => {
-                        return <TripList setUser={this.props.setUser} authenticated={this.authenticated} {...props} />
+                    exact path="/futuretrips" render={props => {
+                        return <FutureTripList setUser={this.props.setUser} authenticated={this.authenticated} {...props} />
+                    }}
+                />
+                <Route
+                    exact path="/pasttrips" render={props => {
+                        return <PastTripList setUser={this.props.setUser} authenticated={this.authenticated} {...props} />
                     }}
                 />
                 <Route exact path="/trips/:tripId(\d+)" render={(props) => {
                     return <TripDetail tripId={parseInt(props.match.params.tripId)} {...props} />
                 }} />
+                <Route
+                    exact path="/locationform" render={props => {
+                        return <LocationForm setUser={this.props.setUser} authenticated={this.authenticated} {...props} />
+                    }}
+                />
             </>
         )
     }

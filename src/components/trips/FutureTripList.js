@@ -49,7 +49,7 @@ class FutureTripList extends Component {
                 <section>
                     <button type="button"
                         onClick={() => { this.props.history.push("/tripform") }}>
-                        New Trip
+                        Plan Future Trip
                     </button>
                 </section>
                 <div>
