@@ -6,7 +6,7 @@ class Home extends Component {
   handleNewTripButton = (evt) => {
     evt.preventDefault()
     if (this.props.authenticated()) {
-      this.props.history.push("/tripform")
+      this.props.history.push("/trips/new")
     } else {
       window.alert('Please register or log in.')
     }

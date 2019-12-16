@@ -16,8 +16,7 @@ class TripDetail extends Component {
     }
 
     componentDidMount() {
-        console.log("AnimalDetail: ComponentDidMount");
-        APIManager.get(`${this.props.tripId}?_expand=location&_expand=season`)
+        APIManager.get("trips", `${this.props.tripId}?_expand=location&_expand=season`)
             .then((trip) => {
                 this.setState({
                     waterName: trip.location.waterName,
@@ -45,7 +44,7 @@ class TripDetail extends Component {
                     <section>Gear: {this.state.gear}</section>
                     <section>Fish: {this.state.fish}</section>
                     <section>Season: {this.state.season}</section>
-                    <button type="button" onClick={() => {this.props.history.push(`/trips/${this.state.tripId}/edit`)}}>Edit Trip Details</button>
+                    <button type="button" onClick={() => {this.props.history.push(`/trips/${this.props.tripId}/edit`)}}>Edit Trip Details</button>
                 </aside>
 
 

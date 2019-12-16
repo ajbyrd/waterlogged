@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+
 
 const remoteURL = "http://localhost:5002"
 
 export default {
 
 
-    get(id) {
-        return fetch(`${remoteURL}/trips/${id}`)
+    get(page, id) {
+        return fetch(`${remoteURL}/${page}/${id}`)
             .then(r => r.json())
     },
 
@@ -35,8 +35,8 @@ export default {
         }).then(r => r.json())
     },
 
-    delete(id) {
-        return fetch(`${remoteURL}/trips/${id}`, {
+    delete(page, id) {
+        return fetch(`${remoteURL}/${page}/${id}`, {
             method: "DELETE",
         }).then(r => r.json())
     }

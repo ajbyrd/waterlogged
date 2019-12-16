@@ -18,7 +18,7 @@ class LocationList extends Component {
     }
 
     deleteLocation = (id) => {
-        APIManager.delete(id)
+        APIManager.delete("locations", id)
         .then(() => {
             APIManager.getAll(`locations?userId=${loggedInUserId()}`)
             .then((newLocations) => {
@@ -40,10 +40,10 @@ class LocationList extends Component {
                     </button>
                 </section>
                 <div>
-                    {this.state.locations.map(location =>
+                    {this.state.locations.map(water =>
                         <LocationCard
-                            key={location.id}
-                            location={location}
+                            key={water.id}
+                            water={water}
                             deleteLocation={this.deleteLocation}
                             {...this.props}
                         />

@@ -11,13 +11,13 @@ class LocationCard extends Component {
         return (
             <>
                 <div>
-                    <h2><span>{this.props.location.waterName}</span></h2>
-                    <h3>{this.props.location.waterAccess}</h3>
-                    <h3>{this.props.location.fish}</h3>
+                    <h2><span>{this.props.water.waterName}</span></h2>
+                    <h3>{this.props.water.waterAccess}</h3>
+                    <h3>{this.props.water.fish}</h3>
                     <button
-                    onClick={() => this.props.deleteLocation(this.props.location.id)}>Delete Location</button>
+                    onClick={() => this.props.deleteLocation(this.props.water.id)}>Delete Location</button>
                     <button
-                    onClick={() => {this.props.history.push(`/locations/${this.props.location.id}/edit`)}}>Edit Location</button>
+                    onClick={() => {this.props.history.push(`/locations/${this.props.water.id}/edit`)}}>Edit Location</button>
                 </div>
             </>
         )

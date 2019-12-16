@@ -25,7 +25,7 @@ class FutureTripList extends Component {
     }
 
     deleteTrip = (id) => {
-        APIManager.delete(id)
+        APIManager.delete("trips", id)
             .then(() => {
                 APIManager.getAll(`trips?userId=${loggedInUserId()}&_expand=location&_expand=season`)
                     .then((newTrips) => {
@@ -48,7 +48,7 @@ class FutureTripList extends Component {
             <>
                 <section>
                     <button type="button"
-                        onClick={() => { this.props.history.push("/tripform") }}>
+                        onClick={() => { this.props.history.push("/trips/new") }}>
                         Plan Future Trip
                     </button>
                 </section>

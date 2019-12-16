@@ -1,16 +1,14 @@
 import { Route } from 'react-router-dom'
 import React, { Component } from 'react'
-// import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import Login from './auth/Login'
 import RegistrationForm from './auth/RegistrationForm'
-import APIManager from './module/APIManager'
 import Home from './home/Home'
 import TripForm from './trips/TripForm'
 import PastTripList from './trips/PastTripList'
 import TripDetail from './trips/TripDetail'
 import FutureTripList from './trips/FutureTripList'
 import LocationForm from './trips/LocationForm'
-import LocationEditForm from './trips/LocationEditForm'
 import LocationList from './trips/LocationList'
 
 class ApplicationViews extends Component {
@@ -57,13 +55,21 @@ class ApplicationViews extends Component {
                     }}
                 />
                 <Route
-                    exact path="/futuretrips" render={props => {
+                    exact path="/futuretrips" render={props => { 
+                        if(this.props.user) {
                         return <FutureTripList setUser={this.props.setUser} authenticated={this.authenticated} {...props} />
+                        } else {
+                            return <Redirect to="/login" />
+                        }
                     }}
                 />
                 <Route
                     exact path="/pasttrips" render={props => {
+                        if (this.props.user) {
                         return <PastTripList setUser={this.props.setUser} authenticated={this.authenticated} {...props} />
+                    } else {
+                        return <Redirect to="/login" />
+                    }
                     }}
                 />
                 <Route exact path="/trips/:tripId(\d+)" render={(props) => {
@@ -77,7 +83,11 @@ class ApplicationViews extends Component {
                 />
                 <Route
                     exact path="/locations" render={props => {
+                        if (this.props.user) {
                         return <LocationList setUser={this.props.setUser} authenticated={this.authenticated} {...props} />
+                        } else {
+                            return <Redirect to="/login" />
+                        }
                     }}
                 />
                 <Route
@@ -87,7 +97,7 @@ class ApplicationViews extends Component {
                 />
                 <Route
                     path="/locations/:locationId(\d+)/edit" render={props => {
-                        return <LocationEditForm {...props} locationId={parseInt(props.match.params.locationId)} setUser={this.props.setUser} authenticated={this.authenticated}
+                        return <LocationForm {...props} locationId={parseInt(props.match.params.locationId)} setUser={this.props.setUser} authenticated={this.authenticated}
                         isNew={false} />
                     }}
                 />
