@@ -16,7 +16,7 @@ class Home extends Component {
   handleNewLocationButton = (evt) => {
     evt.preventDefault()
     if (this.props.authenticated()) {
-      this.props.history.push("/locationform")
+      this.props.history.push("/locations/new")
     } else {
       window.alert('Please register or log in.')
     }

@@ -48,7 +48,7 @@ class PastTripList extends Component {
             <>
                 <section>
                     <button type="button"
-                        onClick={() => { this.props.history.push("/tripform") }}>
+                        onClick={() => { this.props.history.push("/trips/new") }}>
                         Add Past Trip
                     </button>
                 </section>

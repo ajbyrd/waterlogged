@@ -24,7 +24,9 @@ class LocationForm extends Component {
             window.alert("Please complete all fields")
         } else {
             this.setState({ loadingStatus: true })
+            const userId = JSON.parse(localStorage.getItem("credentials")).userId
             const location = {
+                userId: Number(userId),
                 waterName: this.state.waterName,
                 waterAccess: this.state.waterAccess,
                 fish: this.state.fish
@@ -33,6 +35,24 @@ class LocationForm extends Component {
             .then(() => this.props.history.push("/home"))
         }
     }
+
+    updateExistingLocation = evt => {
+        evt.preventDefault()
+        this.setState({ loadingStatus: true })
+        const userId = JSON.parse(localStorage.getItem("credentials")).userId
+        const editedLocation = {
+
+            id: this.props.match.params.locationId,
+            userId: Number(userId),
+            waterName: this.state.waterName,
+            waterAccess: this.state.waterAccess,
+            fish: this.state.fish
+        }
+        APIManager.put("locations", editedLocation.id, editedLocation)
+        .then(() => this.props.history.push("/futuretrips"))
+    }
+
+
 
     render() {
         return (

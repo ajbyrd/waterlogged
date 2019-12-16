@@ -22,7 +22,9 @@ class NavBar extends Component {
                     <li>
                         <Link to='/futuretrips'>Future Trips</Link>
                     </li>
-                    
+                    <li>
+                        <Link to='/locations'>Locations</Link>
+                    </li>
 
                         {
                             !this.props.authenticated() ?

@@ -11,6 +11,7 @@ class TripDetail extends Component {
         waterAccess: '',
         fish: '',
         season: '',
+        locationId: '',
         loadingStatus: true
     }
 
@@ -25,6 +26,7 @@ class TripDetail extends Component {
                     waterAccess: trip.location.waterAccess,
                     fish: trip.location.fish,
                     season: trip.season.season,
+                    locationId: Number(trip.locationId),
                     loadingStatus: false
                 });
             });
@@ -43,8 +45,7 @@ class TripDetail extends Component {
                     <section>Gear: {this.state.gear}</section>
                     <section>Fish: {this.state.fish}</section>
                     <section>Season: {this.state.season}</section>
-                    <button>Edit Trip Details</button>
-                    <button>Edit Location Details</button>
+                    <button type="button" onClick={() => {this.props.history.push(`/trips/${this.state.tripId}/edit`)}}>Edit Trip Details</button>
                 </aside>
 
 
