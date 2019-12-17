@@ -11,6 +11,12 @@
       "email": "hank@hank.com",
       "password": "123",
       "id": 2
+    },
+    {
+      "username": "Byrd",
+      "email": "byrd@byrd.com",
+      "password": "123",
+      "id": 3
     }
   ],
   "trips": [
@@ -39,7 +45,7 @@
     {
       "id": 3,
       "userId": 1,
-      "date": "2019-11-02",
+      "date": "2020-01-23",
       "gear": "5-weight fly rod, Clouser Minnow, topwater popper",
       "isFuture": true,
       "isPast": false,
@@ -68,16 +74,29 @@
       "locationId": 1,
       "seasonId": 1,
       "id": 5
+    },
+    {
+      "userId": 3,
+      "date": "2020-03-28",
+      "gear": "Waders, 8-weight fly rod, streamers, woolly buggers",
+      "isFuture": true,
+      "isPast": false,
+      "isPrivate": false,
+      "locationId": 7,
+      "seasonId": 1,
+      "id": 6
     }
   ],
   "locations": [
     {
       "id": 1,
+      "userId": 1,
       "waterName": "Caney Fork",
       "waterAccess": "Kayak",
       "fish": "Rainbows, Browns, Brookies"
     },
     {
+      "userId": 2,
       "id": 2,
       "waterName": "Tellico River",
       "waterAccess": "Wading",
@@ -85,21 +104,38 @@
     },
     {
       "id": 3,
+      "userId": 1,
       "waterName": "Harpeth River",
       "waterAccess": "Kayak",
-      "fish": "Smallmouth Bass, Longear Sunfish, Panfish"
+      "fish": "Smallmouth Bass, Gar, panfish"
     },
     {
       "id": 4,
+      "userId": 1,
       "waterName": "Cahaba River",
       "waterAccess": "Wet Wading",
       "fish": "Redeye Bass"
     },
     {
+      "userId": 1,
       "waterName": "Hiawassee River",
       "waterAccess": "Drift Boat",
       "fish": "Brown Trout, Rainbow Trout",
       "id": 5
+    },
+    {
+      "userId": 1,
+      "waterName": "North River",
+      "waterAccess": "wading",
+      "fish": "Brown Trout, Native Brook Trout",
+      "id": 6
+    },
+    {
+      "userId": 3,
+      "waterName": "White River",
+      "waterAccess": "Drift Boat, wading",
+      "fish": "Rainbow Trout, Brown Trout",
+      "id": 7
     }
   ],
   "comments": [],

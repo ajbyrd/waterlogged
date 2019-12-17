@@ -24,15 +24,49 @@ class LocationForm extends Component {
             window.alert("Please complete all fields")
         } else {
             this.setState({ loadingStatus: true })
+            const userId = JSON.parse(localStorage.getItem("credentials")).userId
             const location = {
+                userId: Number(userId),
                 waterName: this.state.waterName,
                 waterAccess: this.state.waterAccess,
                 fish: this.state.fish
             }
             APIManager.post("locations", location)
-            .then(() => this.props.history.push("/home"))
+            .then(() => this.props.history.push("/locations"))
         }
     }
+
+    updateExistingLocation = evt => {
+        evt.preventDefault()
+        this.setState({ loadingStatus: true })
+        const userId = JSON.parse(localStorage.getItem("credentials")).userId
+        const editedLocation = {
+
+            id: this.props.match.params.locationId,
+            userId: Number(userId),
+            waterName: this.state.waterName,
+            waterAccess: this.state.waterAccess,
+            fish: this.state.fish
+        }
+        APIManager.put("locations", editedLocation.id, editedLocation)
+        .then(() => this.props.history.push("/locations"))
+    }
+
+
+    componentDidMount() {
+
+        if(!this.props.isNew) {
+        APIManager.get("locations", this.props.match.params.locationId)
+        .then(location => {
+            this.setState({
+                userId: JSON.parse(localStorage.getItem("credentials")).userId,
+                waterName: location.waterName,
+                waterAccess: location.waterAccess,
+                fish: location.fish
+            })
+        })
+    }
+}
 
     render() {
         return (
@@ -45,6 +79,7 @@ class LocationForm extends Component {
                         type="text"
                         onChange={this.handleFieldChange}
                         required
+                        value={this.state.waterName}
                     />
                 </label>
                 <label>
@@ -55,6 +90,7 @@ class LocationForm extends Component {
                         type="text"
                         onChange={this.handleFieldChange}
                         required
+                        value={this.state.waterAccess}
                     />
                 </label>
                 <label>
@@ -65,12 +101,13 @@ class LocationForm extends Component {
                         type="text"
                         onChange={this.handleFieldChange}
                         required
+                        value={this.state.fish}
                     />
                 </label>
                 <button
                     type="button"
                     disabled={this.state.loadingStatus}
-                    onClick={this.createLocation}
+                    onClick={this.props.isNew ? this.createLocation : this.updateExistingLocation}
                 >Add Location
                 </button>
             </form>

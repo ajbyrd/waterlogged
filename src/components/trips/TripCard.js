@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import React, { Component } from 'react'
-import APIManager from '../module/APIManager'
 
 class TripCard extends Component {
 

@@ -1,15 +1,15 @@
 import { Route } from 'react-router-dom'
 import React, { Component } from 'react'
-// import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import Login from './auth/Login'
 import RegistrationForm from './auth/RegistrationForm'
-import APIManager from './module/APIManager'
 import Home from './home/Home'
 import TripForm from './trips/TripForm'
 import PastTripList from './trips/PastTripList'
 import TripDetail from './trips/TripDetail'
 import FutureTripList from './trips/FutureTripList'
 import LocationForm from './trips/LocationForm'
+import LocationList from './trips/LocationList'
 
 class ApplicationViews extends Component {
 
@@ -50,26 +50,55 @@ class ApplicationViews extends Component {
                 />
 
                 <Route
-                    exact path="/tripform" render={props => {
-                        return <TripForm setUser={this.props.setUser} authenticated={this.authenticated} {...props} />
+                    exact path="/trips/new" render={props => {
+                        return <TripForm setUser={this.props.setUser} authenticated={this.authenticated} {...props} isNew={true} />
                     }}
                 />
-                 <Route
-                    exact path="/futuretrips" render={props => {
+                <Route
+                    exact path="/futuretrips" render={props => { 
+                        if(this.props.user) {
                         return <FutureTripList setUser={this.props.setUser} authenticated={this.authenticated} {...props} />
+                        } else {
+                            return <Redirect to="/login" />
+                        }
                     }}
                 />
                 <Route
                     exact path="/pasttrips" render={props => {
+                        if (this.props.user) {
                         return <PastTripList setUser={this.props.setUser} authenticated={this.authenticated} {...props} />
+                    } else {
+                        return <Redirect to="/login" />
+                    }
                     }}
                 />
                 <Route exact path="/trips/:tripId(\d+)" render={(props) => {
-                    return <TripDetail tripId={parseInt(props.match.params.tripId)} {...props} />
+                    return <TripDetail tripId={parseInt(props.match.params.tripId)} {...props}  />
                 }} />
                 <Route
-                    exact path="/locationform" render={props => {
-                        return <LocationForm setUser={this.props.setUser} authenticated={this.authenticated} {...props} />
+                    path="/trips/:tripId(\d+)/edit" render={props => {
+                        return <TripForm {...props} tripId={parseInt(props.match.params.tripId)} setUser={this.props.setUser} authenticated={this.authenticated}
+                        isNew={false} />
+                    }}
+                />
+                <Route
+                    exact path="/locations" render={props => {
+                        if (this.props.user) {
+                        return <LocationList setUser={this.props.setUser} authenticated={this.authenticated} {...props} />
+                        } else {
+                            return <Redirect to="/login" />
+                        }
+                    }}
+                />
+                <Route
+                    exact path="/locations/new" render={props => {
+                        return <LocationForm setUser={this.props.setUser} authenticated={this.authenticated} {...props} isNew={true} />
+                    }}
+                />
+                <Route
+                    path="/locations/:locationId(\d+)/edit" render={props => {
+                        return <LocationForm {...props} locationId={parseInt(props.match.params.locationId)} setUser={this.props.setUser} authenticated={this.authenticated}
+                        isNew={false} />
                     }}
                 />
             </>
