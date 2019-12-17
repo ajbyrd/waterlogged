@@ -14,9 +14,9 @@ class FutureTripList extends Component {
         APIManager.getAll(`trips?userId=${loggedInUserId()}&_expand=location&_expand=season`)
             .then((trips) => {
                 const futureTrips = trips.filter(trip => {
-                    let future = false
-                    if (trip.isFuture === true) {
-                        future = true
+                    let future = true
+                    if (trip.isComplete === true) {
+                        future = false
                     }
                     return future
                 })

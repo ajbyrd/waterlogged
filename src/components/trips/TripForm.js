@@ -7,13 +7,13 @@ class TripForm extends Component {
     state = {
         date: '',
         gear: '',
-        isFuture: false,
-        isPast: false,
-        isPrivate: false,
+        isComplete: false,
         locationId: '',
         seasonId: '',
         locations: [],
         seasons: [],
+        seasonName: '',
+        waterName: '',
         loadingStatus: false
     }
 
@@ -22,14 +22,11 @@ class TripForm extends Component {
         if(!this.props.isNew) {
         APIManager.get("trips", this.props.match.params.tripId)
         .then(trip => {
-            console.log(trip)
             this.setState({
                 userId: JSON.parse(localStorage.getItem("credentials")).userId,
                 date: trip.date,
                 gear: trip.gear,
-                isFuture: trip.isFuture,
-                isPast: trip.isPast,
-                isPrivate: trip.isPrivate,
+                isComplete: trip.isComplete,
                 locationId: Number(trip.locationId),
                 seasonId: Number(trip.seasonId),
                 loadingStatus: false
@@ -39,14 +36,14 @@ class TripForm extends Component {
             .then(results => {
                 this.setState({
                     locations: results,
-                    locationId: results[0].id
+                    locationId: this.state.locationId
                 })
             })
         APIManager.getAll("seasons")
             .then(r => {
                 this.setState({
                     seasons: r,
-                    seasonId: r[0].id
+                    seasonId: this.state.seasonId
                 })
             })
         } else {
@@ -54,7 +51,7 @@ class TripForm extends Component {
             .then(results => {
                 this.setState({
                     locations: results,
-                    locationId: results[0].id
+                    locationId: results[0].id,
                 })
             })
         APIManager.getAll("seasons")
@@ -84,19 +81,17 @@ class TripForm extends Component {
                 userId: Number(userId),
                 date: this.state.date,
                 gear: this.state.gear,
-                isFuture: this.state.isFuture,
-                isPast: this.state.isPast,
-                isPrivate: this.state.isPrivate,
+                isComplete: this.state.isComplete,
                 locationId: Number(this.state.locationId),
                 seasonId: Number(this.state.seasonId)
             }
 
             APIManager.post("trips", trip)
                 .then(() => {
-                    if (this.state.isFuture === true) {
-                        this.props.history.push("/futuretrips")
-                    } else {
+                    if (this.state.isComplete === true) {
                         this.props.history.push("/pasttrips")
+                    } else {
+                        this.props.history.push("/futuretrips")
                     }
                 })
         }
@@ -113,18 +108,16 @@ class TripForm extends Component {
             userId: Number(userId),
             date: this.state.date,
             gear: this.state.gear,
-            isFuture: this.state.isFuture,
-            isPast: this.state.isPast,
-            isPrivate: this.state.isPrivate,
+            isComplete: this.state.isComplete,
             locationId: Number(this.state.locationId),
             seasonId: Number(this.state.seasonId)
         }
         APIManager.put("trips", this.props.match.params.tripId, editedTrip)
         .then(() => {
-            if (this.state.isFuture === true) {
-                this.props.history.push("/futuretrips")
-            } else {
+            if (this.state.isComplete === true) {
                 this.props.history.push("/pasttrips")
+            } else {
+                this.props.history.push("/futuretrips")
             }
         })
     }
@@ -145,36 +138,14 @@ class TripForm extends Component {
             <>
                 <form>
                     <label>
-                        Future Trip?
+                        Completed Trip?
                         <input
-                            name="isFuture"
-                            id="isFuture"
+                            name="isComplete"
+                            id="isComplete"
                             type="checkbox"
-                            checked={this.state.isFuture}
+                            checked={this.state.isComplete}
                             onChange={this.handleCheckbox}
-                            value={this.state.isFuture}
-                        />
-                    </label>
-                    <label>
-                        Past Trip?
-                        <input
-                            name="isPast"
-                            id="isPast"
-                            type="checkbox"
-                            checked={this.state.isPast}
-                            onChange={this.handleCheckbox}
-                            value={this.state.isPast}
-                        />
-                    </label>
-                    <label>
-                        Make private?
-                        <input
-                            name="isPrivate"
-                            id="isPrivate"
-                            type="checkbox"
-                            checked={this.state.isPrivate}
-                            onChange={this.handleCheckbox}
-                            value={this.state.isPrivate}
+                            value={this.state.isComplete}
                         />
                     </label>
                     <label>
@@ -209,7 +180,7 @@ class TripForm extends Component {
                     </label>
 
                     <label >Select Season
-                        <select id="seasonId" onChange={this.handleFieldChange} >
+                        <select id="seasonId" onChange={this.handleFieldChange} value={this.state.seasonId} >
                             {this.state.seasons.map(season => (
                                 <option key={`select-option-${season.id}`} value={season.id}>{season.season}</option>
                             ))}

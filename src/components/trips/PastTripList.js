@@ -15,7 +15,7 @@ class PastTripList extends Component {
             .then((trips) => {
                 const pastTrips = trips.filter(trip => {
                     let past = false
-                    if (trip.isPast === true) {
+                    if (trip.isComplete === true) {
                         past = true
                     }
                     return past
