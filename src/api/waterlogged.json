@@ -13,8 +13,8 @@
       "id": 2
     },
     {
-      "username": "Byrd",
-      "email": "byrd@byrd.com",
+      "username": "Rose",
+      "email": "rose@rose.edu",
       "password": "123",
       "id": 3
     }
@@ -25,9 +25,7 @@
       "userId": 1,
       "date": "2019-07-23",
       "gear": "5-weight fly rod, Parachute Adams dry fly with nymph dropper",
-      "isFuture": false,
-      "isPast": true,
-      "isPrivate": false,
+      "isComplete": true,
       "locationId": 1,
       "seasonId": 2
     },
@@ -36,9 +34,7 @@
       "userId": 2,
       "date": "2019-11-02",
       "gear": "5-weight fly rod, San Juan worm with a strike indicator",
-      "isFuture": false,
-      "isPast": true,
-      "isPrivate": false,
+      "isComplete": true,
       "locationId": 2,
       "seasonId": 1
     },
@@ -47,20 +43,16 @@
       "userId": 1,
       "date": "2020-01-23",
       "gear": "5-weight fly rod, Clouser Minnow, topwater popper",
-      "isFuture": true,
-      "isPast": false,
-      "isPrivate": false,
+      "isComplete": true,
       "locationId": 3,
-      "seasonId": 1
+      "seasonId": 3
     },
     {
       "id": 4,
       "userId": 1,
       "date": "2019-11-02",
       "gear": "5-weight fly rod, black woolly bugger",
-      "isFuture": true,
-      "isPast": false,
-      "isPrivate": false,
+      "isComplete": false,
       "locationId": 4,
       "seasonId": 3
     },
@@ -68,23 +60,64 @@
       "userId": 1,
       "date": "2020-03-28",
       "gear": "5-weight fly rod, elk hair caddis dry fly, streamers",
-      "isFuture": true,
-      "isPast": false,
-      "isPrivate": false,
+      "isComplete": false,
       "locationId": 1,
       "seasonId": 1,
       "id": 5
     },
     {
-      "userId": 3,
+      "userId": 1,
+      "date": "2019-11-02",
+      "gear": "5 weight fly rod, San Juan worm with strike indicator, elk hair caddis dry fly ",
+      "isComplete": true,
+      "locationId": 2,
+      "seasonId": 3,
+      "id": 7
+    },
+    {
+      "id": 8,
+      "userId": 1,
       "date": "2020-03-28",
-      "gear": "Waders, 8-weight fly rod, streamers, woolly buggers",
-      "isFuture": true,
-      "isPast": false,
-      "isPrivate": false,
-      "locationId": 7,
+      "gear": "5 weight fly rod, 12 ft tapered leader, topwater poppers, white woolly buggers\n",
+      "isComplete": false,
+      "locationId": 8,
+      "seasonId": 1
+    },
+    {
+      "id": 9,
+      "userId": 3,
+      "date": "2019-12-16",
+      "gear": "8-weight fly rod, sinking line, woolly bugger fly",
+      "isComplete": true,
+      "locationId": 9,
+      "seasonId": 1
+    },
+    {
+      "userId": 1,
+      "date": "2019-12-01",
+      "gear": "fly rod, eight weight",
+      "isComplete": true,
+      "locationId": 4,
+      "seasonId": 4,
+      "id": 10
+    },
+    {
+      "id": 11,
+      "userId": 1,
+      "date": "2019-12-31",
+      "gear": "5 weight fly rod ",
+      "isComplete": true,
+      "locationId": 6,
+      "seasonId": 4
+    },
+    {
+      "userId": 2,
+      "date": "2020-03-28",
+      "gear": "e-collar, leash, life jacket",
+      "isComplete": false,
+      "locationId": 8,
       "seasonId": 1,
-      "id": 6
+      "id": 12
     }
   ],
   "locations": [
@@ -131,11 +164,18 @@
       "id": 6
     },
     {
+      "userId": 1,
+      "waterName": "Stones River",
+      "waterAccess": "Kayak",
+      "fish": "Smallmouth bass, crappie, longear sunfish \n",
+      "id": 8
+    },
+    {
       "userId": 3,
-      "waterName": "White River",
-      "waterAccess": "Drift Boat, wading",
-      "fish": "Rainbow Trout, Brown Trout",
-      "id": 7
+      "waterName": "Cumberland River",
+      "waterAccess": "boat",
+      "fish": "toxic catfish",
+      "id": 9
     }
   ],
   "comments": [],
