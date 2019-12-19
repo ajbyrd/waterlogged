@@ -136,10 +136,13 @@ class TripForm extends Component {
     render() {
         return (
             <>
-                <form>
-                    <label>
+            <fieldset className="ba b--transparent ph0 mh0">
+                <form className="pa4 black-80">
+                <div className="measure center">
+                    <label className="f6 b flex items-center db mb2">
                         Completed Trip?
                         <input
+                        className="ml3"
                             name="isComplete"
                             id="isComplete"
                             type="checkbox"
@@ -148,9 +151,11 @@ class TripForm extends Component {
                             value={this.state.isComplete}
                         />
                     </label>
-                    <label>
+                    
+                    <label className="f6 b db mb2">
                         Date
                     <input
+                    className="ba pa2 mb2 db w-100"
                             name="date"
                             id="date"
                             type="date"
@@ -159,9 +164,26 @@ class TripForm extends Component {
                             value={this.state.date}
                         />
                     </label>
-                    <label>
+
+                    <label className="f6 b db mb2">Select Location
+                        <select className="ba pa2 mb2 db w-100" as="select" id="locationId" onChange={this.handleFieldChange} value={this.state.locationId}>
+                            {this.state.locations.map(location => (
+                                <option key={`select-option-${location.id}`} value={location.id}>{location.waterName}</option>
+                            ))}
+                        </select>
+                    </label>
+
+                    <label className="f6 b db mb2">Select Season
+                        <select className="ba pa2 mb2 db w-100" id="seasonId" onChange={this.handleFieldChange} value={this.state.seasonId} >
+                            {this.state.seasons.map(season => (
+                                <option key={`select-option-${season.id}`} value={season.id}>{season.season}</option>
+                            ))}
+                        </select>
+                    </label>
+                    <label className="f6 b db mb3">
                         Gear
                     <textarea
+                    className="input-reset ba b--black-20 pa2 mb2 db w-100"
                             name="gear"
                             id="gear"
                             type="text"
@@ -170,29 +192,16 @@ class TripForm extends Component {
                             value={this.state.gear}
                         />
                     </label>
-
-                    <label>Select Location
-                        <select as="select" id="locationId" onChange={this.handleFieldChange} value={this.state.locationId}>
-                            {this.state.locations.map(location => (
-                                <option key={`select-option-${location.id}`} value={location.id}>{location.waterName}</option>
-                            ))}
-                        </select>
-                    </label>
-
-                    <label >Select Season
-                        <select id="seasonId" onChange={this.handleFieldChange} value={this.state.seasonId} >
-                            {this.state.seasons.map(season => (
-                                <option key={`select-option-${season.id}`} value={season.id}>{season.season}</option>
-                            ))}
-                        </select>
-                    </label>
                     <button
+                    className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
                         type="button"
                         disabled={this.state.loadingStatus}
                         onClick={this.props.isNew ? this.createTrip : this.updateExistingTrip}
                     >Log Trip
                 </button>
+                </div>
                 </form>
+                </fieldset>
             </>
         )
     }

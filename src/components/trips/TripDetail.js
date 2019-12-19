@@ -44,7 +44,9 @@ class TripDetail extends Component {
                     <section>Gear: {this.state.gear}</section>
                     <section>Fish: {this.state.fish}</section>
                     <section>Season: {this.state.season}</section>
-                    <button type="button" onClick={() => {this.props.history.push(`/trips/${this.props.tripId}/edit`)}}>Edit Trip Details</button>
+                    <button 
+                    className="b ph3 pv2 input-reset ba ml3 b--black bg-transparent grow pointer f6 dib"
+                    type="button" onClick={() => {this.props.history.push(`/trips/${this.props.tripId}/edit`)}}>Edit Trip Details</button>
                 </aside>
 
 

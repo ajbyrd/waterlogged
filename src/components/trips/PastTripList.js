@@ -47,7 +47,9 @@ class PastTripList extends Component {
         return (
             <>
                 <section>
-                    <button type="button"
+                    <button 
+                    className="b ph3 pv2 input-reset ba ml3 b--black bg-transparent grow pointer f6 dib"
+                    type="button"
                         onClick={() => { this.props.history.push("/trips/new") }}>
                         Add Past Trip
                     </button>

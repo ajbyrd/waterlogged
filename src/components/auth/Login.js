@@ -48,31 +48,31 @@ class Login extends Component {
 
     render() {
         return (
-            <main class="pa4 black-80">
-                <form class="measure center" onSubmit={this.handleLogin}>
-                    <fieldset class="ba b--transparent ph0 mh0">
-                        <legend class="f4 fw6 ph0 mh0">Sign In</legend>
-                        <div class="mt3">
-                            <label class="db fw6 lh-copy f6" htmlFor="inputEmail" >Email Address</label>
+            <main className="pa4 black-80">
+                <form className="measure center" onSubmit={this.handleLogin}>
+                    <fieldset className="ba b--transparent ph0 mh0">
+                        <legend className="f4 fw6 ph0 mh0">Sign In</legend>
+                        <div className="mt3">
+                            <label className="db fw6 lh-copy f6" htmlFor="inputEmail" >Email Address</label>
                             <input
-                                class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+                                className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                                 onChange={this.handleFieldChange}
                                 type="email"
                                 id="email"
                                 required="" autoFocus="" />
                         </div>
-                        <div class="mv3">
-                            <label class="db fw6 lh-copy f6" htmlFor="inputPassword">Password</label>
+                        <div className="mv3">
+                            <label className="db fw6 lh-copy f6" htmlFor="inputPassword">Password</label>
                             <input
-                                class="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+                                className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                                 onChange={this.handleFieldChange}
                                 type="password"
                                 id="password"                        
                                 required="" />
                         </div>
                     </fieldset>
-                    <div class="">
-                        <input class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Sign in"></input>
+                    <div className="">
+                        <input className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Sign in"></input>
                     </div>
           </form>
           </main>

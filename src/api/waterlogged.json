@@ -191,6 +191,13 @@
       "waterAccess": "boat",
       "fish": "toxic catfish",
       "id": 9
+    },
+    {
+      "userId": 1,
+      "waterName": "Little Lagoon",
+      "waterAccess": "Kayak, Skiff",
+      "fish": "Redfish, speckled trout",
+      "id": 10
     }
   ],
   "comments": [],

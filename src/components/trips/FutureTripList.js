@@ -48,6 +48,7 @@ class FutureTripList extends Component {
             <>
                 <section>
                     <button type="button"
+                        className="b ph3 pv2 input-reset ba ml3 b--black bg-transparent grow pointer f6 dib"
                         onClick={() => { this.props.history.push("/trips/new") }}>
                         Plan Future Trip
                     </button>

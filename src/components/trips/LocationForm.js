@@ -70,12 +70,12 @@ class LocationForm extends Component {
 
     render() {
         return (
-            <form class="pa4 black-80">
-                <div class="measure">
-                    <label class="f6 b db mb2">
+            <form className="pa4 black-80">
+                <div className="measure center">
+                    <label className="f6 b db mb2">
                         Water Name
                             <input
-                            class="input-reset ba b--black-20 pa2 mb2 db w-100"
+                            className="input-reset ba b--black-20 pa2 mb2 db w-100"
                             name="waterName"
                             id="waterName"
                             type="text"
@@ -84,10 +84,10 @@ class LocationForm extends Component {
                             value={this.state.waterName}
                         />
                     </label>
-                    <label class="f6 b db mb2">
+                    <label className="f6 b db mb2">
                         Water Access
                             <input
-                            class="input-reset ba b--black-20 pa2 mb2 db w-100"
+                            className="input-reset ba b--black-20 pa2 mb2 db w-100"
                             name="waterAccess"
                             id="waterAccess"
                             type="text"
@@ -96,10 +96,10 @@ class LocationForm extends Component {
                             value={this.state.waterAccess}
                         />
                     </label>
-                    <label class="f6 b db mb2">
+                    <label className="f6 b db mb2">
                         Fish Species
                             <textarea
-                            class="input-reset ba b--black-20 pa2 mb2 db w-100"
+                            className="input-reset ba b--black-20 pa2 mb2 db w-100"
                             name="fish"
                             id="fish"
                             type="text"
@@ -109,6 +109,7 @@ class LocationForm extends Component {
                         />
                     </label>
                     <button
+                    className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
                         type="button"
                         disabled={this.state.loadingStatus}
                         onClick={this.props.isNew ? this.createLocation : this.updateExistingLocation}
