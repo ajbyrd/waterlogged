@@ -17,6 +17,12 @@
       "email": "rose@rose.edu",
       "password": "123",
       "id": 3
+    },
+    {
+      "username": "Craig",
+      "email": "craig@craig.com",
+      "password": "123",
+      "id": 4
     }
   ],
   "trips": [
@@ -118,6 +124,15 @@
       "locationId": 8,
       "seasonId": 1,
       "id": 12
+    },
+    {
+      "userId": 1,
+      "date": "2019-12-17",
+      "gear": "fly rod",
+      "isComplete": true,
+      "locationId": 8,
+      "seasonId": 4,
+      "id": 13
     }
   ],
   "locations": [

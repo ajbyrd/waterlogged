@@ -33,7 +33,7 @@ class LocationList extends Component {
     render() {
         return (
             <>
-                <section>
+                <section >
                     <button type="button"
                         onClick={() => { this.props.history.push("/locations/new") }}>
                         Add Location

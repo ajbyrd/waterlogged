@@ -20,7 +20,7 @@ class LocationForm extends Component {
 
     createLocation = evt => {
         evt.preventDefault()
-        if (this.state.waterName === "" || this.state.waterAccess === "" || this.state.fish === "" ) {
+        if (this.state.waterName === "" || this.state.waterAccess === "" || this.state.fish === "") {
             window.alert("Please complete all fields")
         } else {
             this.setState({ loadingStatus: true })
@@ -32,7 +32,7 @@ class LocationForm extends Component {
                 fish: this.state.fish
             }
             APIManager.post("locations", location)
-            .then(() => this.props.history.push("/locations"))
+                .then(() => this.props.history.push("/locations"))
         }
     }
 
@@ -49,67 +49,72 @@ class LocationForm extends Component {
             fish: this.state.fish
         }
         APIManager.put("locations", editedLocation.id, editedLocation)
-        .then(() => this.props.history.push("/locations"))
+            .then(() => this.props.history.push("/locations"))
     }
 
 
     componentDidMount() {
 
-        if(!this.props.isNew) {
-        APIManager.get("locations", this.props.match.params.locationId)
-        .then(location => {
-            this.setState({
-                userId: JSON.parse(localStorage.getItem("credentials")).userId,
-                waterName: location.waterName,
-                waterAccess: location.waterAccess,
-                fish: location.fish
-            })
-        })
+        if (!this.props.isNew) {
+            APIManager.get("locations", this.props.match.params.locationId)
+                .then(location => {
+                    this.setState({
+                        userId: JSON.parse(localStorage.getItem("credentials")).userId,
+                        waterName: location.waterName,
+                        waterAccess: location.waterAccess,
+                        fish: location.fish
+                    })
+                })
+        }
     }
-}
 
     render() {
         return (
-            <form>
-                <label>
-                    Water Name
+            <form class="pa4 black-80">
+                <div class="measure">
+                    <label class="f6 b db mb2">
+                        Water Name
                             <input
-                        name="waterName"
-                        id="waterName"
-                        type="text"
-                        onChange={this.handleFieldChange}
-                        required
-                        value={this.state.waterName}
-                    />
-                </label>
-                <label>
-                    Water Access
+                            class="input-reset ba b--black-20 pa2 mb2 db w-100"
+                            name="waterName"
+                            id="waterName"
+                            type="text"
+                            onChange={this.handleFieldChange}
+                            required
+                            value={this.state.waterName}
+                        />
+                    </label>
+                    <label class="f6 b db mb2">
+                        Water Access
                             <input
-                        name="waterAccess"
-                        id="waterAccess"
-                        type="text"
-                        onChange={this.handleFieldChange}
-                        required
-                        value={this.state.waterAccess}
-                    />
-                </label>
-                <label>
-                    Fish Species
+                            class="input-reset ba b--black-20 pa2 mb2 db w-100"
+                            name="waterAccess"
+                            id="waterAccess"
+                            type="text"
+                            onChange={this.handleFieldChange}
+                            required
+                            value={this.state.waterAccess}
+                        />
+                    </label>
+                    <label class="f6 b db mb2">
+                        Fish Species
                             <textarea
-                        name="fish"
-                        id="fish"
-                        type="text"
-                        onChange={this.handleFieldChange}
-                        required
-                        value={this.state.fish}
-                    />
-                </label>
-                <button
-                    type="button"
-                    disabled={this.state.loadingStatus}
-                    onClick={this.props.isNew ? this.createLocation : this.updateExistingLocation}
-                >Add Location
+                            class="input-reset ba b--black-20 pa2 mb2 db w-100"
+                            name="fish"
+                            id="fish"
+                            type="text"
+                            onChange={this.handleFieldChange}
+                            required
+                            value={this.state.fish}
+                        />
+                    </label>
+                    <button
+                        type="button"
+                        disabled={this.state.loadingStatus}
+                        onClick={this.props.isNew ? this.createLocation : this.updateExistingLocation}
+                    >Add Location
                 </button>
+                </div>
             </form>
         )
     }

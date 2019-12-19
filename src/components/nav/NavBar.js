@@ -11,40 +11,41 @@ class NavBar extends Component {
 
     render() {
         return (
-            <nav>
-                <ul className="container">
-                    <li>
-                        <Link to='/home'>Home</Link>
-                    </li>
-                    <li>
+            <nav class="pa3 pa4-ns">
+                    <a class="black b f1 f-headline-ns tc db mb3 mb4-ns">
+                        Waterlogged
+                    </a>
+                <div class="tc pb3">
+                    <a class="link dim gray f6 f5-ns dib mr3"><Link to='/home'>Home</Link></a>
+                    <a class="link dim gray f6 f5-ns dib mr3">
                         <Link to='/pasttrips'>Past Trips</Link>
-                    </li>
-                    <li>
+                    </a>
+                    <a class="link dim gray f6 f5-ns dib mr3">
                         <Link to='/futuretrips'>Future Trips</Link>
-                    </li>
-                    <li>
+                    </a>
+                    <a class="link dim gray f6 f5-ns dib mr3">
                         <Link to='/locations'>Locations</Link>
-                    </li>
+                    </a>
 
                         {
                             !this.props.authenticated() ?
                                 <>
-                                    <li>
+                                    <a class="link dim gray f6 f5-ns dib mr3">
                                         <Link to="/login">Login</Link>
-                                    </li>
+                                    </a>
 
-                                    <li>
+                                    <a class="link dim gray f6 f5-ns dib mr3">
                                         <Link to="/register">Register</Link>
-                                    </li>
+                                    </a>
                                 </>
                                 :
-                                <li>
-                                    <button onClick={this.handleLogout}>Logout</button>
-                                </li>
+                                <a class="link dim gray f6 f5-ns dib mr3">
+                                    <Link onClick={this.handleLogout}>Logout</Link>
+                                </a>
                         }
 
                     
-                </ul>
+                </div>
 
             </nav>
 
