@@ -16,30 +16,30 @@ class NavBar extends Component {
                         Waterlogged
                     </div>
                 <div className="tc pb3">
-                    <div className="link dim gray f6 f5-ns dib mr3"><Link to='/home'>Home</Link></div>
-                    <div className="link dim gray f6 f5-ns dib mr3">
+                    <div className="link dim gray f6 f4-ns dib mr3"><Link to='/home'>Home</Link></div>
+                    <div className="link dim gray f6 f4-ns dib mr3">
                         <Link to='/pasttrips'>Past Trips</Link>
                     </div>
-                    <div className="link dim gray f6 f5-ns dib mr3">
+                    <div className="link dim gray f6 f4-ns dib mr3">
                         <Link to='/futuretrips'>Future Trips</Link>
                     </div>
-                    <div className="link dim gray f6 f5-ns dib mr3">
+                    <div className="link dim gray f6 f4-ns dib mr3">
                         <Link to='/locations'>Locations</Link>
                     </div>
 
                         {
                             !this.props.authenticated() ?
                                 <>
-                                    <div className="link dim gray f6 f5-ns dib mr3">
+                                    <div className="link dim gray f6 f4-ns dib mr3">
                                         <Link to="/login">Login</Link>
                                     </div>
 
-                                    <div className="link dim gray f6 f5-ns dib mr3">
+                                    <div className="link dim gray f6 f4-ns dib mr3">
                                         <Link to="/register">Register</Link>
                                     </div>
                                 </>
                                 :
-                                <div className="link dim gray f6 f5-ns dib mr3">
+                                <div className="link dim gray f6 f4-ns dib mr3">
                                     <Link to="/home" onClick={this.handleLogout}>Logout</Link>
                                 </div>
                         }

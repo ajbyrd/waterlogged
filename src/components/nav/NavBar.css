@@ -3,12 +3,14 @@
 #logo-head {
   font-family: 'Tangerine', cursive;
   letter-spacing: 15px;
+  /* color: white */
 }
 
 nav .container {
     display: flex;
     padding: 0;
     margin-bottom: 0;
+    color: white;
   }
   
   nav .container li {
@@ -20,4 +22,10 @@ nav .container {
     list-style-type: none;
   }
 
+
+  nav {
+    background-color: #CDCDC0;
+  }
+
+ 
   
