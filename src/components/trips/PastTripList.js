@@ -31,7 +31,7 @@ class PastTripList extends Component {
                     .then((newTrips) => {
                         const newPastTrips = newTrips.filter(trip => {
                             let past = false
-                            if (trip.isPast === true) {
+                            if (trip.isComplete === true) {
                                 past = true
                             }
                             return past
@@ -46,7 +46,7 @@ class PastTripList extends Component {
     render() {
         return (
             <>
-                <section>
+                <section className="add-button">
                     <button 
                     className="b ph3 pv2 input-reset ba ml3 b--black bg-transparent grow pointer f6 dib"
                     type="button"
@@ -54,7 +54,7 @@ class PastTripList extends Component {
                         Add Past Trip
                     </button>
                 </section>
-                <div>
+                <div className="container-cards">
                     {this.state.trips.map(trip =>
                         <TripCard
                             key={trip.id}

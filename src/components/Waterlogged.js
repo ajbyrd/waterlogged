@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import NavBar from "./nav/NavBar";
 import ApplicationViews from "./ApplicationViews";
+import './Waterlogged.css'
+
 
 class Waterlogged extends Component {
 

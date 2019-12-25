@@ -10,7 +10,7 @@ class LocationCard extends Component {
     render() {
         return (
             <>
-                <article className="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+                <article className="mw5 card center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
                     <div>
                         <h2><span>{this.props.water.waterName}</span></h2>
                         <h3>{this.props.water.waterAccess}</h3>

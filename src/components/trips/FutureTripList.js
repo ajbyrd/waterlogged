@@ -30,9 +30,9 @@ class FutureTripList extends Component {
                 APIManager.getAll(`trips?userId=${loggedInUserId()}&_expand=location&_expand=season`)
                     .then((newTrips) => {
                         const newFutureTrips = newTrips.filter(trip => {
-                            let future = false
-                            if (trip.isFuture === true) {
-                                future = true
+                            let future = true
+                            if (trip.isComplete === true) {
+                                future = false
                             }
                             return future
                         })
@@ -46,14 +46,14 @@ class FutureTripList extends Component {
     render() {
         return (
             <>
-                <section>
+                <section className="add-button">
                     <button type="button"
                         className="b ph3 pv2 input-reset ba ml3 b--black bg-transparent grow pointer f6 dib"
                         onClick={() => { this.props.history.push("/trips/new") }}>
                         Plan Future Trip
                     </button>
                 </section>
-                <div>
+                <div className="container-cards">
                     {this.state.trips.map(trip =>
                         <TripCard
                             key={trip.id}

@@ -12,7 +12,7 @@ class NavBar extends Component {
     render() {
         return (
             <nav className="pa3 pa4-ns">
-                    <div className="black b f1 f-headline-ns tc db mb3 mb4-ns">
+                    <div id="logo-head" className="black b f1 f-headline-ns tc db mb3 mb4-ns">
                         Waterlogged
                     </div>
                 <div className="tc pb3">

@@ -34,7 +34,7 @@ class LocationList extends Component {
         return (
             <>
                 <section className="cf">
-                    <div >
+                    <div className="add-button">
                         <button
                             className="b ph3 pv2 input-reset ba ml3 b--black bg-transparent grow pointer f6 dib"
                             type="button"
@@ -42,7 +42,7 @@ class LocationList extends Component {
                             Add Location
                     </button>
                     </div>
-                    <div >
+                    <div className="container-cards">
                         {this.state.locations.map(water =>
                             <LocationCard
                                 key={water.id}
