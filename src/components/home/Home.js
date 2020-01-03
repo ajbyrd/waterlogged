@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+
 class Home extends Component {
 
 
@@ -38,8 +39,9 @@ class Home extends Component {
         className="b ph3 pv2 input-reset ba ml3 b--black bg-transparent grow pointer f6 dib"
           onClick={this.handleNewLocationButton}
         >Add New Location</button>
-
 </section>
+<footer id='footer-pic'></footer>
+
       </>
     )
   }

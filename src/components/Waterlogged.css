@@ -14,15 +14,19 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px; 
-    /* background: rgb(14, 92, 49); */
     margin-bottom: 2em;
     flex: 0 1 24%;
   }
 
   body {
       background-color: #CDCDC0;
-  }
+    }
 
   #cards {
-    background-color: #CDCDC0;
+    background-color: rgb(80, 80, 47);
   }
+
+  #footer-pic {
+    background-image: url("https://images.app.goo.gl/A9PU8iiaXt4bkMUa7");
+}
+
