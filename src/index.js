@@ -4,6 +4,7 @@ import './index.css';
 import { BrowserRouter as Router } from "react-router-dom"
 import Waterlogged from './components/Waterlogged';
 import * as serviceWorker from './serviceWorker';
+import 'tachyons'
 
 ReactDOM.render(
 

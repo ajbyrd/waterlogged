@@ -17,6 +17,12 @@
       "email": "rose@rose.edu",
       "password": "123",
       "id": 3
+    },
+    {
+      "username": "Craig",
+      "email": "craig@craig.com",
+      "password": "123",
+      "id": 4
     }
   ],
   "trips": [
@@ -27,7 +33,7 @@
       "gear": "5-weight fly rod, Parachute Adams dry fly with nymph dropper",
       "isComplete": true,
       "locationId": 1,
-      "seasonId": 2
+      "seasonId": 3
     },
     {
       "id": 2,
@@ -39,24 +45,6 @@
       "seasonId": 1
     },
     {
-      "id": 3,
-      "userId": 1,
-      "date": "2020-01-23",
-      "gear": "5-weight fly rod, Clouser Minnow, topwater popper",
-      "isComplete": true,
-      "locationId": 3,
-      "seasonId": 3
-    },
-    {
-      "id": 4,
-      "userId": 1,
-      "date": "2019-11-02",
-      "gear": "5-weight fly rod, black woolly bugger",
-      "isComplete": false,
-      "locationId": 4,
-      "seasonId": 3
-    },
-    {
       "userId": 1,
       "date": "2020-03-28",
       "gear": "5-weight fly rod, elk hair caddis dry fly, streamers",
@@ -66,22 +54,13 @@
       "id": 5
     },
     {
+      "id": 7,
       "userId": 1,
       "date": "2019-11-02",
       "gear": "5 weight fly rod, San Juan worm with strike indicator, elk hair caddis dry fly ",
       "isComplete": true,
-      "locationId": 2,
-      "seasonId": 3,
-      "id": 7
-    },
-    {
-      "id": 8,
-      "userId": 1,
-      "date": "2020-03-28",
-      "gear": "5 weight fly rod, 12 ft tapered leader, topwater poppers, white woolly buggers\n",
-      "isComplete": false,
-      "locationId": 8,
-      "seasonId": 1
+      "locationId": 5,
+      "seasonId": 3
     },
     {
       "id": 9,
@@ -118,6 +97,87 @@
       "locationId": 8,
       "seasonId": 1,
       "id": 12
+    },
+    {
+      "userId": 1,
+      "date": "2020-03-20",
+      "gear": "5-weight fly rod, topwater poppers, 9ft tapered leader",
+      "isComplete": false,
+      "locationId": 8,
+      "seasonId": 1,
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "date": "2020-03-13",
+      "gear": "5-weight fly rod, parachute adams dry fly with nymph dropper",
+      "isComplete": false,
+      "locationId": 5,
+      "seasonId": 1,
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "date": "2020-06-17",
+      "gear": "Tenkara rod, cold water assortment of dry flies",
+      "isComplete": false,
+      "locationId": 6,
+      "seasonId": 2,
+      "id": 15
+    },
+    {
+      "userId": 1,
+      "date": "2020-04-24",
+      "gear": "8 weight fly rod, clouser minnows, woolly buggers, streamers",
+      "isComplete": false,
+      "locationId": 10,
+      "seasonId": 1,
+      "id": 16
+    },
+    {
+      "userId": 1,
+      "date": "2020-03-27",
+      "gear": "8-weight fly rod, clouser minnows, crab patters, crawfish patterns",
+      "isComplete": false,
+      "locationId": 11,
+      "seasonId": 1,
+      "id": 17
+    },
+    {
+      "userId": 1,
+      "date": "2020-10-23",
+      "gear": "5-weight fly rod, mouse patterns and streamers",
+      "isComplete": false,
+      "locationId": 14,
+      "seasonId": 3,
+      "id": 18
+    },
+    {
+      "userId": 1,
+      "date": "2020-08-28",
+      "gear": "8 weight fly rod, streamers, clouser minnows, 12 lb tippet, tapered 12ft leader",
+      "isComplete": false,
+      "locationId": 12,
+      "seasonId": 2,
+      "id": 19
+    },
+    {
+      "userId": 1,
+      "date": "2020-07-03",
+      "gear": "6 weight fly rod, mayfly patterns, tapered leader",
+      "isComplete": false,
+      "locationId": 13,
+      "seasonId": 2,
+      "id": 20
+    },
+    {
+      "userId": 1,
+      "date": "2019-08-30",
+      "gear": "8 weight fly rod, chartreuse clouser minnow",
+      "isComplete": true,
+      "locationId": 10,
+      "seasonId": 2,
+      "id": 21
     }
   ],
   "locations": [
@@ -176,6 +236,62 @@
       "waterAccess": "boat",
       "fish": "toxic catfish",
       "id": 9
+    },
+    {
+      "userId": 1,
+      "waterName": "Little Lagoon",
+      "waterAccess": "Kayak, skiff",
+      "fish": "Redfish, speckled trout",
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "waterName": "Kiawah River",
+      "waterAccess": "Kayak, skiff",
+      "fish": "Redfish, speckled trout",
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "waterName": "Andros Islands",
+      "waterAccess": "Skiff",
+      "fish": "Bonefish",
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "waterName": "Gunnison River",
+      "waterAccess": "Wading",
+      "fish": "Brown trout, Rainbow trout",
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "waterName": "River Test, England",
+      "waterAccess": "Wading",
+      "fish": "Brown Trout",
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "waterName": "Florida Keys",
+      "waterAccess": "Skiff",
+      "fish": "Permit, Tarpon, Bonefish",
+      "id": 15
+    },
+    {
+      "userId": 1,
+      "waterName": "Henry's Fork",
+      "waterAccess": "Wading, Drift Boat",
+      "fish": "Rainbow Trout",
+      "id": 16
+    },
+    {
+      "userId": 1,
+      "waterName": "Middle Fork, Salmon River",
+      "waterAccess": "Wading",
+      "fish": "Cutthroat Trout",
+      "id": 17
     }
   ],
   "comments": [],

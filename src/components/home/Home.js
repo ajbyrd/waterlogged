@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+
 class Home extends Component {
 
 
@@ -26,18 +27,21 @@ class Home extends Component {
   render() {
     return (
       <>
-        <h1>
-          Waterlogged
-      </h1>
+      <section className="mw5 mw7-ns center bg-light-gray pa3 ph5-ns">
         <p>
           Waterlogged is your new one stop shop for keeping track of past and future fly-fishing trips. Get started by choosing an option below!
-      </p>
+        </p>
         <button
+        className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
           onClick={this.handleNewTripButton}
         >Add Trip from Existing Location</button>
         <button
+        className="b ph3 pv2 input-reset ba ml3 b--black bg-transparent grow pointer f6 dib"
           onClick={this.handleNewLocationButton}
         >Add New Location</button>
+</section>
+<footer id='footer-pic'></footer>
+
       </>
     )
   }
