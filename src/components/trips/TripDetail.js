@@ -37,12 +37,12 @@ class TripDetail extends Component {
     render() {
         return (
             <>
-                <div className="add-button">
+                <div className="mb4 add-button">
                     <button
                         className="b ph3 pv2 input-reset ba ml3 b--black bg-transparent grow pointer f6 dib"
                         type="button" onClick={() => { this.props.history.push(`/trips/${this.props.tripId}/edit`) }}>Edit Trip Details</button>
                 </div>
-                <div id="outer-div" className="cf pa3 pa4-m pa5-l mw9 center">
+                <div id="outer-div" className="cf pa1 pa1-m pa1-l mw8 mb4 center ba b--light-silver br3">
                     <div id="info-div">
                         <h1 className="f2 f1-l lh-title mt0 mb4 mb1-ns" >{this.state.waterName}</h1>
                         <h2 className="dn db-ns">{this.state.date}</h2>
