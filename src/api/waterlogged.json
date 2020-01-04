@@ -27,15 +27,6 @@
   ],
   "trips": [
     {
-      "id": 1,
-      "userId": 1,
-      "date": "2019-07-23",
-      "gear": "5-weight fly rod, Parachute Adams dry fly with nymph dropper",
-      "isComplete": true,
-      "locationId": 1,
-      "seasonId": 3
-    },
-    {
       "id": 2,
       "userId": 2,
       "date": "2019-11-02",
@@ -52,15 +43,6 @@
       "locationId": 1,
       "seasonId": 1,
       "id": 5
-    },
-    {
-      "id": 7,
-      "userId": 1,
-      "date": "2019-11-02",
-      "gear": "5 weight fly rod, San Juan worm with strike indicator, elk hair caddis dry fly ",
-      "isComplete": true,
-      "locationId": 5,
-      "seasonId": 3
     },
     {
       "id": 9,
@@ -163,21 +145,32 @@
     },
     {
       "userId": 1,
-      "date": "2020-07-03",
-      "gear": "6 weight fly rod, mayfly patterns, tapered leader",
-      "isComplete": false,
-      "locationId": 13,
-      "seasonId": 2,
-      "id": 20
-    },
-    {
-      "userId": 1,
       "date": "2019-08-30",
       "gear": "8 weight fly rod, chartreuse clouser minnow",
       "isComplete": true,
       "locationId": 10,
       "seasonId": 2,
       "id": 21
+    },
+    {
+      "userId": 1,
+      "date": "2019-09-18",
+      "gear": "fly rod",
+      "isComplete": true,
+      "locationId": 3,
+      "seasonId": 3,
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/cbngkmuta3qkqqpgc9he",
+      "id": 22
+    },
+    {
+      "id": 23,
+      "userId": 1,
+      "date": "2019-07-04",
+      "gear": "8-weight fly rod",
+      "isComplete": true,
+      "locationId": 1,
+      "seasonId": 2,
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/aj7rquodi0n3z0nypohm"
     }
   ],
   "locations": [
