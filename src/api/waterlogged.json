@@ -27,22 +27,14 @@
   ],
   "trips": [
     {
-      "id": 1,
-      "userId": 1,
-      "date": "2019-07-23",
-      "gear": "5-weight fly rod, Parachute Adams dry fly with nymph dropper",
-      "isComplete": true,
-      "locationId": 1,
-      "seasonId": 3
-    },
-    {
       "id": 2,
       "userId": 2,
       "date": "2019-11-02",
       "gear": "5-weight fly rod, San Juan worm with a strike indicator",
       "isComplete": true,
       "locationId": 2,
-      "seasonId": 1
+      "seasonId": 1,
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/plht6ccwgreaaq4vuldb"
     },
     {
       "userId": 1,
@@ -51,16 +43,8 @@
       "isComplete": false,
       "locationId": 1,
       "seasonId": 1,
-      "id": 5
-    },
-    {
-      "id": 7,
-      "userId": 1,
-      "date": "2019-11-02",
-      "gear": "5 weight fly rod, San Juan worm with strike indicator, elk hair caddis dry fly ",
-      "isComplete": true,
-      "locationId": 5,
-      "seasonId": 3
+      "id": 5,
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/plht6ccwgreaaq4vuldb"
     },
     {
       "id": 9,
@@ -69,25 +53,8 @@
       "gear": "8-weight fly rod, sinking line, woolly bugger fly",
       "isComplete": true,
       "locationId": 9,
-      "seasonId": 1
-    },
-    {
-      "userId": 1,
-      "date": "2019-12-01",
-      "gear": "fly rod, eight weight",
-      "isComplete": true,
-      "locationId": 4,
-      "seasonId": 4,
-      "id": 10
-    },
-    {
-      "id": 11,
-      "userId": 1,
-      "date": "2019-12-31",
-      "gear": "5 weight fly rod ",
-      "isComplete": true,
-      "locationId": 6,
-      "seasonId": 4
+      "seasonId": 1,
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/plht6ccwgreaaq4vuldb"
     },
     {
       "userId": 2,
@@ -96,7 +63,8 @@
       "isComplete": false,
       "locationId": 8,
       "seasonId": 1,
-      "id": 12
+      "id": 12,
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/plht6ccwgreaaq4vuldb"
     },
     {
       "userId": 1,
@@ -105,7 +73,8 @@
       "isComplete": false,
       "locationId": 8,
       "seasonId": 1,
-      "id": 13
+      "id": 13,
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/plht6ccwgreaaq4vuldb"
     },
     {
       "userId": 1,
@@ -114,7 +83,8 @@
       "isComplete": false,
       "locationId": 5,
       "seasonId": 1,
-      "id": 14
+      "id": 14,
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/plht6ccwgreaaq4vuldb"
     },
     {
       "userId": 1,
@@ -123,7 +93,8 @@
       "isComplete": false,
       "locationId": 6,
       "seasonId": 2,
-      "id": 15
+      "id": 15,
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/plht6ccwgreaaq4vuldb"
     },
     {
       "userId": 1,
@@ -132,7 +103,8 @@
       "isComplete": false,
       "locationId": 10,
       "seasonId": 1,
-      "id": 16
+      "id": 16,
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/plht6ccwgreaaq4vuldb"
     },
     {
       "userId": 1,
@@ -141,7 +113,8 @@
       "isComplete": false,
       "locationId": 11,
       "seasonId": 1,
-      "id": 17
+      "id": 17,
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/plht6ccwgreaaq4vuldb"
     },
     {
       "userId": 1,
@@ -150,7 +123,8 @@
       "isComplete": false,
       "locationId": 14,
       "seasonId": 3,
-      "id": 18
+      "id": 18,
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/plht6ccwgreaaq4vuldb"
     },
     {
       "userId": 1,
@@ -159,25 +133,128 @@
       "isComplete": false,
       "locationId": 12,
       "seasonId": 2,
-      "id": 19
+      "id": 19,
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/plht6ccwgreaaq4vuldb"
     },
     {
       "userId": 1,
-      "date": "2020-07-03",
-      "gear": "6 weight fly rod, mayfly patterns, tapered leader",
-      "isComplete": false,
-      "locationId": 13,
+      "date": "2019-09-18",
+      "gear": "fly rod",
+      "isComplete": true,
+      "locationId": 3,
+      "seasonId": 3,
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/cbngkmuta3qkqqpgc9he",
+      "id": 22
+    },
+    {
+      "id": 23,
+      "userId": 1,
+      "date": "2019-07-04",
+      "gear": "8-weight fly rod",
+      "isComplete": true,
+      "locationId": 1,
       "seasonId": 2,
-      "id": 20
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/aj7rquodi0n3z0nypohm"
     },
     {
       "userId": 1,
-      "date": "2019-08-30",
-      "gear": "8 weight fly rod, chartreuse clouser minnow",
+      "date": "2015-05-15",
+      "gear": "8-weight fly rod, clouser minnows, crab patterns",
       "isComplete": true,
       "locationId": 10,
+      "seasonId": 1,
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/sep3lkyocrvoudygmgx0",
+      "id": 24
+    },
+    {
+      "userId": 1,
+      "date": "2014-05-04",
+      "gear": "5-weight fly rod, San Juan worms",
+      "isComplete": true,
+      "locationId": 4,
+      "seasonId": 1,
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/fshah3bmb6rsja0zktzi",
+      "id": 25
+    },
+    {
+      "id": 26,
+      "userId": 1,
+      "date": "2019-11-02",
+      "gear": "5-weight fly rod, parachute adams, egg patterns, strike indicator",
+      "isComplete": true,
+      "locationId": 6,
+      "seasonId": 3,
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/u1jyxvqaxkgftbqqw0ci"
+    },
+    {
+      "id": 27,
+      "userId": 1,
+      "date": "2019-09-05",
+      "gear": "5-weight fly rod, san juan worm",
+      "isComplete": true,
+      "locationId": 18,
       "seasonId": 2,
-      "id": 21
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/i8wnuiauicyjcfht4qwj"
+    },
+    {
+      "id": 28,
+      "userId": 1,
+      "date": "2019-11-03",
+      "gear": "Waders, Long johns, fly rod",
+      "isComplete": true,
+      "locationId": 5,
+      "seasonId": 3,
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/z0ehxoo3qg40ctdq2had"
+    },
+    {
+      "id": 29,
+      "userId": 1,
+      "date": "2017-07-01",
+      "gear": "8-weight fly rod, crab/crawfish patterns",
+      "isComplete": true,
+      "locationId": 11,
+      "seasonId": 2,
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/dcpjacn8lj01wjcoowjv"
+    },
+    {
+      "id": 30,
+      "userId": 1,
+      "date": "2019-09-15",
+      "gear": "5-weight fly rod, mayfly pattern",
+      "isComplete": true,
+      "locationId": 1,
+      "seasonId": 3,
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/iifpzcyxweuridcbrgqa"
+    },
+    {
+      "userId": 1,
+      "date": "2020-03-27",
+      "gear": "5-weigth fly rod, top water poppers",
+      "isComplete": false,
+      "locationId": 8,
+      "seasonId": 1,
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/plht6ccwgreaaq4vuldb",
+      "id": 31
+    },
+    {
+      "id": 32,
+      "userId": 1,
+      "date": "2020-07-01",
+      "gear": "5-weight fly rod, Elk Hair Caddis dry flies",
+      "isComplete": false,
+      "locationId": 19,
+      "seasonId": 2,
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/e5tasjgfe7w1ltspeq4d"
+    },
+    {
+      "userId": 1,
+      "date": "2019-08-03",
+      "gear": "5-weight fly rod, San Juan worms, small clouser minnow",
+      "isComplete": true,
+      "locationId": 20,
+      "seasonId": 2,
+      "imageUrl": "https://res.cloudinary.com/dyjt2xbwf/image/upload/v1578065021/qc9heanmdeytun9mjzr6",
+      "id": 33
     }
   ],
   "locations": [
@@ -260,13 +337,6 @@
     },
     {
       "userId": 1,
-      "waterName": "Gunnison River",
-      "waterAccess": "Wading",
-      "fish": "Brown trout, Rainbow trout",
-      "id": 13
-    },
-    {
-      "userId": 1,
       "waterName": "River Test, England",
       "waterAccess": "Wading",
       "fish": "Brown Trout",
@@ -292,6 +362,27 @@
       "waterAccess": "Wading",
       "fish": "Cutthroat Trout",
       "id": 17
+    },
+    {
+      "userId": 1,
+      "waterName": "Little Harpeth River",
+      "waterAccess": "Wet Wading",
+      "fish": "Smallmouth Bass, Longear Sunfish, Panfish",
+      "id": 18
+    },
+    {
+      "userId": 1,
+      "waterName": "Bitterroot River",
+      "waterAccess": "Wading, Drift Boat",
+      "fish": "Cutthroat trout, Rainbow Trout, Brown Trout",
+      "id": 19
+    },
+    {
+      "userId": 1,
+      "waterName": "Mill Creek",
+      "waterAccess": "Wet Wading",
+      "fish": "Smallmouth bass, Longear Sunfish",
+      "id": 20
     }
   ],
   "comments": [],
