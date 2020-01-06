@@ -9,7 +9,7 @@ class TripCard extends Component {
     render() {
         return (
             <>
-                <article id="cards" className="card mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+                <article id="cards" className="card mw5 grow center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
                     <div>
                         <div className="center tc">
                             <img src={this.props.trip.imageUrl} className="br-100 h4 w4 dib pa2" title="card image"></img>

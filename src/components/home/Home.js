@@ -27,8 +27,8 @@ class Home extends Component {
   render() {
     return (
       <>
-        <section className="mw5 mw7-ns center bg-light-gray pa3 ph5-ns">
-          <p>
+        <section className="mw5 mw7-ns center br3 bg-light-gray pa3 ph5-ns">
+          <p className="f4">
             Waterlogged is your new one stop shop for keeping track of past and future fly-fishing trips. Get started by choosing an option below!
         </p>
           <div className="tc">
