@@ -214,16 +214,16 @@ class TripForm extends Component {
 
                             {/* This image tag will contain the uploaded image because we are using the imageUrl property in state which we change when the image is uploaded*/}
                             <img className="uploadImage" src={this.state.imageUrl} alt="" />
-                            <button onClick={this.uploadWidget.bind(this)} className="upload-button b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib">
+                            <button onClick={this.uploadWidget.bind(this)} type="button" disabled={this.state.loadingStatus} className="upload-button b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib">
                                 Add Image
                             </button>
                             <div className="mt3">
-                            <button
-                                className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
-                                type="button"
-                                disabled={this.state.loadingStatus}
-                                onClick={this.props.isNew ? this.createTrip : this.updateExistingTrip}
-                            >Log Trip
+                                <button
+                                    className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
+                                    type="button"
+                                    disabled={this.state.loadingStatus}
+                                    onClick={this.props.isNew ? this.createTrip : this.updateExistingTrip}
+                                >Log Trip
                             </button>
                             </div>
                         </div>
