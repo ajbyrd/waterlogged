@@ -1,3 +1,19 @@
+#Waterlogged
+
+Waterlogged is an application for planning and logging details of future and past fly fishing trips. 
+
+To use this application, please follow these steps:
+
+Clone this repository
+Navigate to the application directory
+Run npm start in the terminal
+Navigate to the api directory
+Run json-server in port 5002: json-server -p 5002 -w waterlogged.json
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
