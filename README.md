@@ -1,4 +1,4 @@
-#Waterlogged
+# Waterlogged
 
 Waterlogged is an application for planning and logging details of future and past fly fishing trips. 
 
