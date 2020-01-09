@@ -4,11 +4,11 @@ Waterlogged is an application for planning and logging details of future and pas
 
 To use this application, please follow these steps:
 
-Clone this repository
-Navigate to the application directory
-Run npm start in the terminal
-Navigate to the api directory
-Run json-server in port 5002: json-server -p 5002 -w waterlogged.json
+Clone this repository<br />
+Navigate to the application directory<br />
+Run npm start in the terminal<br />
+Navigate to the api directory<br />
+Run json-server in port 5002: json-server -p 5002 -w waterlogged.json<br />
 
 
 
