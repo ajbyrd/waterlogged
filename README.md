@@ -4,7 +4,7 @@ As an avid fly fisherman I set out to create an application to make the lives of
 
 This application was built over a two week sprint for my front-end capstone project at Nashville Software School. Technologies used include React.js,  JSON Server for persistent data storage, and Tachyons for styling. 
 
-![Waterlogged home screen](./waterlogged.png)
+![Waterlogged home screen](./waterlogged.PNG)
 
 To use this application, please follow these steps:
 
