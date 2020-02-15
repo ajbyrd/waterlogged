@@ -6,6 +6,8 @@ This application was built over a two week sprint for my front-end capstone proj
 
 ![Waterlogged home screen](./waterlogged.PNG)
 
+
+
 To use this application, please follow these steps:
 
 Clone this repository<br />
