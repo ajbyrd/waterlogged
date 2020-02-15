@@ -44,24 +44,24 @@ class TripDetail extends Component {
                 </div>
                 <div id="outer-div" className="cf pa1 pa1-m pa1-l mw8 mb4 center ba bw2 b--dark-green br3">
                     <div id="info-div" className="">
-                        <h1 className="f2 f1-l lh-title mt0 mb4 mb1-ns" >{this.state.waterName}</h1>
+                        <h1 className="f2 f1-l lh-title mt0 mb4 mb1-ns" >{this.state.waterName || ""}</h1>
                         <h2 className="dn db-ns">{this.state.date}</h2>
 
-                        <div className="f4">Water Access: {this.state.waterAccess}</div>
+                        <div className="f4">Water Access: {this.state.waterAccess || ""}</div>
 
 
-                        <div className="f4">Gear: {this.state.gear}</div>
+                        <div className="f4">Gear: {this.state.gear || ""}</div>
 
 
-                        <div className="f4">Fish: {this.state.fish}</div>
+                        <div className="f4">Fish: {this.state.fish || ""}</div>
 
 
-                        <div className="f4">Season: {this.state.season}</div>
+                        <div className="f4">Season: {this.state.season || ""}</div>
 
                     </div>
                     <div id="img-div" className="center" >
                         {(this.state.imageUrl !== "")
-                            ? <><img className="db mt4 mr2 measure center" src={this.state.imageUrl} alt={this.state.waterName} /><br /></>
+                            ? <><img className="db mt4 mr2 measure center" src={this.state.imageUrl || ""} alt={this.state.waterName} /><br /></>
                             : null}
                     </div>
                 </div>
